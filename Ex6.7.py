@@ -16,6 +16,7 @@ print(bin((2 ** 16) -1))
 
 print('%s' % bin((2 ** 16) -1)[2:])
 
+# Exlicit value references
 print('The {0} side {1} {2}'.format('bright', 'of', 'life'))
 
 print('The {} side {} {}'.format('birght', 'of', 'life'))
@@ -28,6 +29,7 @@ print('{:f}, {:.2f}, {:06.2f}'.format(3.14159, 3.14159, 3.14159))
 
 print('%f, %.2f, %06.2f' % (3.14159, 3.14159, 3.14159))
 
+# method names and general arguments
 print('%.2f' % 1.2345)
 
 print('%.2f %s' % (1.2345, 99))
