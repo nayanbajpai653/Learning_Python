@@ -57,8 +57,25 @@ M = map(abs, (-1, 0, 1))                         # make a new to scan again
 for x in M:
     print(x)                                     # iteration ccontexts auto call next()
 
-list(map(abs, (-1, 0, 1)))                       # can force a real list if needed
+print(list(map(abs, (-1, 0, 1))))                # can force a real list if needed
 
+Z = zip((1, 2, 3), (10, 20, 30))                 # zip is the same: a one-pass iteratior
+print(Z)
 
+print(list(Z))
 
+for pair in Z:
+    print(pair)                                  # exhausted after one pass
 
+Z = zip((1, 2, 3), (10, 20, 30))
+for pair in Z:
+    print(pair)                                  # iterator used automatically or manully 
+
+Z = zip((1, 2, 3), (10, 20, 30))
+print(next(Z))
+
+print(next(Z))
+
+print(filter(bool, ['spam', '', 'ni']))
+
+print(list(filter(bool, ['spam', '', 'ni'])))
