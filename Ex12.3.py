@@ -1,6 +1,6 @@
 # Multiple versus single iterators
 R = range(3)                                     # range allows multiple iterators 
-# print(next(R))                                   # range object is not iterator
+print(next(R))                                   # range object is not iterator
 
 I1 = iter(R)
 print(I1)
@@ -26,7 +26,7 @@ I1= iter(M)
 I2 = iter(M)
 print(next(I1), next(I1), next(I1))
 
-# print(next(I2))                                  # stop iteration
+print(next(I2))                                  # stop iteration
 
 R = range(3)                                     # but range allows many iterators
 I1, I2 = iter(R), iter(R)
@@ -41,7 +41,7 @@ print(D)
 K = D.keys()                                     
 print(K)
 
-# print(next(K))                                   # view are not iterators themselves
+print(next(K))                                   # view are not iterators themselves
 
 I = iter(K)                                      # view have an iterator,
 print(next(I))                                   # which can be used manually but does not support len(), index
