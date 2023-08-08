@@ -50,3 +50,36 @@ print(next(I))
 
 for k in D.keys():                               # all iteration contexts use auto
     print(k, end=' ')
+
+K = D.keys()                                     # can still force s real list if needed
+print(list(K))
+
+V = D.values()                                   # ditto for values() and items() views
+print(V)
+
+print(list(V))
+
+print(list(D.items()))
+
+for (k, v) in D.items():
+    print(k, v, end=' ')
+
+print(D)                                         # dictionaries still have own iterator
+                                                 # returns next key in each iteration
+I = iter(D)                                      
+print(next(I))
+
+print(next(I))
+
+for key in D:
+    print(key, end=' ')                          # still no need to call keys() to iterate
+
+print(D)
+
+for k in sorted(D.keys()):
+    print(k, D[k], end=' ')
+
+print(D)
+
+for k in sorted(D.keys()):
+    print(k, D[k], end=' ')                      # best practice key sorting
